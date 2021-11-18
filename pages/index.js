@@ -1,62 +1,39 @@
 import Head from 'next/head'
+import Cards from '../components/cards'
+import Footer from '../components/footer'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Avinash's Portfolio</title>
+        <link rel="icon" href="/icon.svg" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
+        <div className = "intro">
+          <h2>
+            Hi <img src="/hand-wave.svg" alt="Hand Wave" className="logo" />, Welcome to my Portfolio.
+          </h2>
+          <h1 className="title">
+            I am Avinash
+          </h1>
+        </div>
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          
+          <a href = "/about"><Cards title = "About Me" description = "I am a Generalist who has a hard time describing what I do, so you may get a different answer each time you ask."/></a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <a href = "/experiences"><Cards title = "Experiences" description = "Brief overview of mistakes I have made and lessons learnt founding two failed sartups"/></a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <a href = "/projects"><Cards title = "Projects" description = "Projects that I built for my own and other's businesses"/></a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <a href = "/interests"><Cards title = "Interests" description = "Science, Technology, History, Philosophy, I love it all. Check out my favourites"/></a>
+          
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
+        <Footer/>
       </footer>
 
       <style jsx>{`
@@ -124,11 +101,6 @@ export default function Home() {
           text-align: center;
         }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
         code {
           background: #fafafa;
           border-radius: 5px;
@@ -143,39 +115,8 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
           max-width: 800px;
           margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
         }
 
         .logo {
@@ -187,6 +128,10 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
+        }
+
+        div {
+          border: 1px solid green
         }
       `}</style>
 
