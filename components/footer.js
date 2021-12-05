@@ -1,10 +1,10 @@
 export default function footer () {
     return (
-        <div className = "footer">
-            <div className = "container">
+        <div className = "flex flex-col place-items-center mt-3">
+            <div className = "">
                 <h5>Get in touch and let's build something cool together</h5>
             </div>
-            <div className = "container">
+            <div className = "p-6 flex flex-row place-items-center">
                 <a
                 href = ""
                 target="_blank"
@@ -46,23 +46,6 @@ export default function footer () {
                 </a>
             </div>
             <style jsx> {`
-                .container {
-                    padding:  1.5rem;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    border: 1px solid yellow;
-                  }
-
-                  .footer {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: 1px solid yellow;
-                  }
-
                   .social {
                     height: 2em;
                     padding: 0 0.5rem;

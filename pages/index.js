@@ -1,154 +1,49 @@
 import Head from 'next/head'
 import Cards from '../components/cards'
 import Footer from '../components/footer'
+import 'tailwindcss/tailwind.css'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="h-screen">
       <Head>
         <title>Avinash's Portfolio</title>
         <link rel="icon" href="/icon.svg" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main>
-        <div className = "intro">
-          <h2>
-            Hi <img src="/hand-wave.svg" alt="Hand Wave" className="logo" />, Welcome to my Portfolio.
-          </h2>
-          <h1 className="title">
+      <main className = "mx-20 border border-black h-5/6">
+        <div className = "border border-black my-1 h-24 text-center my-16">
+          <div className = "flex flex-row justify-center">
+            <h3 className = "font-serif px-1">Hi</h3>
+            <img className="" src="/hand-wave.svg" alt="Hand Wave" className="logo" />,
+            <h3 className = "px-3 font-serif">Welcome to my Portfolio.</h3>
+          </div>
+          <h1 className="block font-serif">
             I am Avinash
           </h1>
         </div>
-        <div className="grid">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-x-6 mx-8 border border-purple-2 justify-items-center">
           
-          <a href = "/about"><Cards title = "About Me" description = "I am a Generalist who has a hard time describing what I do, so you may get a different answer each time you ask."/></a>
+          <a href = "/about" className="border border-purple-2"><Cards title = "About Me" img = "about.png"/></a>
 
-          <a href = "/experiences"><Cards title = "Experiences" description = "Brief overview of mistakes I have made and lessons learnt founding two failed sartups"/></a>
+          <a href = "/experiences"><Cards title = "Experiences" img = "experience.png"/></a>
 
-          <a href = "/projects"><Cards title = "Projects" description = "Projects that I built for my own and other's businesses"/></a>
+          <a href = "/projects"><Cards title = "Projects" img = "projects.png"/></a>
 
-          <a href = "/interests"><Cards title = "Interests" description = "Science, Technology, History, Philosophy, I love it all. Check out my favourites"/></a>
+          <a href = "/interests"><Cards title = "Interests" img = "interests.png"/></a>
           
         </div>
+
+        
+
       </main>
 
-      <footer>
+      <footer className = "fixed-bottom block h-1/6 mx-20">
         <Footer/>
       </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-
-        div {
-          border: 1px solid green
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }
