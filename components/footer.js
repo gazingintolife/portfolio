@@ -1,8 +1,8 @@
 export default function footer () {
     return (
         <div className = "flex flex-col place-items-center mt-3">
-            <div className = "">
-                <h5>Get in touch and let's build something cool together</h5>
+            <div className = "font-sans text-xl font-normal">
+                <h5 >Get in touch and let's build something cool together</h5>
             </div>
             <div className = "p-6 flex flex-row place-items-center">
                 <a

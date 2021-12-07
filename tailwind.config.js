@@ -11,7 +11,8 @@ module.exports = {
       "2xl":"1536px"
     },
     fontFamily: {
-      serif: ["Roboto Slab"]
+      "serif": ["Roboto Slab"],
+      "sans": ['Helvetica', 'Arial', 'sans-serif']
     }
   },
   variants: {
