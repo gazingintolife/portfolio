@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css'
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="md:h-screen flex flex-col">
       <Head>
         <title>Avinash's Portfolio</title>
         <link rel="icon" href="/icon.svg" />
@@ -13,41 +13,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className = "mx-20 h-5/6 flex flex-col flex-initial">
-        <div className = "my-1 h-24 text-center my-16">
-          <div className = "flex flex-row justify-center">
-            <h3 className = "font-sans text-3xl px-1">Hi</h3>
-            <img className="inline-block h-8 w-8" src="/hand-wave.svg" alt="Hand Wave"/>,
-            <h3 className = "px-3 font-sans text-3xl">Welcome to my Portfolio.</h3>
+      <div className='flex flex-col'>
+        <main className = "mx-20 h-5/6 grid grid-row-2">
+          <div className = "my-1 mt-6 md:h-24 text-center md:my-16 block">
+          
+            <div className = "flex flex-col md:flex-row justify-center">
+              <div className='flex flex-col items-center my-3 md:flex-row md:mx-6 '>
+                <h3 className = "font-sans text-3xl px-1 md:px-3">Hi</h3>
+                <img className="inline-block h-8 w-8" src="/hand-wave.svg" alt="Hand Wave"/>
+              </div>
+              <h3 className = "px-3 my-3 font-sans text-3xl">Welcome to my Portfolio.</h3>
+            </div>
+
+            <div className = "flex flex-col md:flex-row justify-center my-6">
+              <h1 className="font-sans text-5xl font-semibold py-6 px-3">
+                I am
+              </h1>
+              <h1 className = "font-sans text-5xl font-semibold text-blue-500 p-6 px-2">Avinash</h1>
+            </div>
+
           </div>
-          <div className = "flex flex-row justify-center">
-            <h1 className="font-sans text-5xl font-semibold py-6 px-3">
-              I am
-            </h1>
-            <h1 className = "font-sans text-5xl font-semibold text-blue-500 p-6 px-2">Avinash</h1>
+
+          <div className="flex flex-col md:mx-6 items-center md:flex-row md:space-x-6 md:justify-evenly">
+            <a href = "/about" className="py-6"><Cards title = "About Me" img = "about.png"/></a>
+
+            <a href = "/experiences" className="py-6"><Cards title = "Experiences" img = "experience.png"/></a>
+
+            <a href = "/projects" className="py-6"><Cards title = "Projects" img = "projects.png"/></a>
+
+            <a href = "/interests" className="py-6"><Cards title = "Interests" img = "interests.png"/></a>
           </div>
-          
-        </div>
+        </main>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-x-6 mx-8 justify-items-center">
-          
-          <a href = "/about" className=""><Cards title = "About Me" img = "about.png"/></a>
-
-          <a href = "/experiences"><Cards title = "Experiences" img = "experience.png"/></a>
-
-          <a href = "/projects"><Cards title = "Projects" img = "projects.png"/></a>
-
-          <a href = "/interests"><Cards title = "Interests" img = "interests.png"/></a>
-          
-        </div>
-
-        
-
-      </main>
-
-      <footer className = "fixed-bottom block h-1/6 mx-20 mt-16">
-        <Footer/>
-      </footer>
+        <footer className = "md:fixed-bottom h-1/6 mx-20 mt-16">
+          <Footer/>
+        </footer>
+      </div>
     </div>
   )
 }

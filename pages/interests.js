@@ -10,7 +10,7 @@ export default function interests () {
 
                 <div className = "flex flex-col">
                     <div className = "block">
-                        <h2 className = "flex flex-row text-5xl my-8 py-8 justify-center text-center leading-relaxed">
+                        <h2 className = "flex flex-row text-5xl m-8 py-8 justify-center text-center leading-relaxed">
                             We are what we repeatedly do.
                         </h2>
                     </div>
@@ -20,15 +20,15 @@ export default function interests () {
                         </h4>
                     </div>
 
-                    <div className = "flex flex-row mx-8 space-x-6 justify-evenly">
-                        <div className = "">
-                            <a href = "https://avinashrathee.notion.site/Ananta-AI-Inc-afe283f2d2da41b7b89f546d4fcf8751"> <Cards title = "Books" img = "books.png"/> </a>
+                    <div className = "flex flex-col flex-1 md:mx-6 items-center md:flex-row md:space-x-6 md:justify-evenly">
+                        <div className = "py-6">
+                            <a href = "https://avinashrathee.notion.site/Books-83b8ede5c2fd42d1b3996d27d6dcb9da" target="_blank"> <Cards title = "Books" img = "books.png"/> </a>
                         </div>
-                        <div className = "">
-                            <a href = ""> <Cards title = "Podcasts" img="pod.png"/> </a>
+                        <div className = "py-6">
+                            <a href = "https://avinashrathee.notion.site/Podcasts-e423890e3a324e80bc1128c84b111ced" target="_blank"> <Cards title = "Podcasts" img="pod.png"/> </a>
                         </div>
-                        <div className = "">
-                            <a href = ""> <Cards title = "Reading Material" img = "sm.png"/> </a>
+                        <div className = "py-6">
+                            <a href = "https://avinashrathee.notion.site/Articles-Reading-sources-52f230303ff64696b5bd5384a452528b" target="_blank"> <Cards title = "Reading Material" img = "sm.png"/> </a>
                         </div>
                     </div>
                 </div>
