@@ -1,7 +1,7 @@
 export default function footer () {
     return (
-        <div className = "flex flex-col place-items-center mt-3">
-            <div className = "font-sans text-xl font-normal text-center">
+        <div className = "flex flex-col place-items-center mt-3 bg-black text-white">
+            <div className = "font-sans font-semibold text-xl font-normal text-center">
                 <h5 >Get in touch and let's build something cool together</h5>
             </div>
             <div className = "p-6 flex flex-row place-items-center divide-x-2">
@@ -47,7 +47,7 @@ export default function footer () {
             </div>
             <style jsx> {`
                   .social {
-                    height: 2em;
+                    height: 4em;
                     padding: 0 0.5rem;
                   }
             `}

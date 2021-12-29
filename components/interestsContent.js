@@ -4,7 +4,7 @@ import Cards from "./cards";
 export default function interestsContent () {
     return (
         <div>
-            <div className = "flex flex-row justify-center mb-8 py-8 text-3xl text-center">
+            <div className = "flex flex-row justify-center mb-8 py-8 text-3xl text-center font-extrabold bg-gradient-to-r from-violet-500 to-fuchsia-500">
             <h4> 
                 Interests 
             </h4>

@@ -4,7 +4,7 @@ import Cards from "./cards";
 export default function projectsContent () {
     return (
         <div>
-            <div className = "flex flex-row justify-center mb-8 py-8 text-3xl text-center">
+            <div className = "flex flex-row justify-center mb-8 py-8 text-3xl text-center font-extrabold">
                 <h4>
                     Projects 
                 </h4>

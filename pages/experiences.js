@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css'
 
 export default function experiences () {
     return (
-        <div className="h-100">
+        <div className="h-100 bg-black text-white">
             <Header/>
 
                 <div className = "flex flex-col">
