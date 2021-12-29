@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/icon.svg" />
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel='stylesheet' href='./index.scss'/>
       </Head>
 
       <div className='flex flex-col'>

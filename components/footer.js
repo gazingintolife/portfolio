@@ -4,7 +4,7 @@ export default function footer () {
             <div className = "font-sans text-xl font-normal text-center">
                 <h5 >Get in touch and let's build something cool together</h5>
             </div>
-            <div className = "p-6 flex flex-row place-items-center">
+            <div className = "p-6 flex flex-row place-items-center divide-x-2">
                 <a
                 href = ""
                 target="_blank"
